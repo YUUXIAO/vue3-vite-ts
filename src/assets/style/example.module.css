@@ -1,0 +1,9 @@
+.flex{
+    display: flex;
+}
+
+.fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
