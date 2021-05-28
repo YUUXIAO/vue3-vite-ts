@@ -6,20 +6,35 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "prepare": "husky install",
-    "test": "console.log(test)"
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,vue}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
-    "vue": "^3.0.5",
+    "axios": "^0.21.1",
     "element-plus": "^1.0.2-beta.36",
-    "vue-router": "4",
-    "axios": "^0.21.1"
+    "vue": "^3.0.5",
+    "vue-router": "4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "prettier": "^2.3.0",
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
     "typescript": "^4.1.3",
     "vite": "^2.3.4",
     "vue-tsc": "^0.0.24",
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0"
   }
 }
