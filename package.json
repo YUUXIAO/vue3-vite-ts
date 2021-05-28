@@ -6,10 +6,8 @@
     "test": "vite --mode test",
     "pre": "vite --mode uat",
     "build": "vue-tsc --noEmit && vite build --mode prod",
-    "postinstall": "husky install",
-    "pre-commit": "lint-staged",
+    "prepare": "husky install",
     "commitlint": "commitlint --config commitlint.config.js -e -V",
-    "lint:eslint": "eslint \"src/**/*.{vue,ts}\" --fix",
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js"
   },
   "lint-staged": {
@@ -20,12 +18,12 @@
   "dependencies": {
     "axios": "^0.21.1",
     "element-plus": "^1.0.2-beta.36",
-    "lint-staged": "^11.0.0",
     "vue": "^3.0.5",
     "vue-router": "4",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "lint-staged": "^11.0.0",
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@types/lodash": "^4.14.168",
