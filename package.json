@@ -8,18 +8,19 @@
     "build": "vue-tsc --noEmit && vite build --mode prod",
     "postinstall": "husky install",
     "pre-commit": "lint-staged",
-    "commitlint": "commitlint --config commitlint.config.js -e -V"
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "lint:eslint": "eslint \"src/**/*.{vue,ts}\" --fix",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js"
   },
   "lint-staged": {
     "src/**/*.{ts,vue}": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
+      "eslint --fix"
     ]
   },
   "dependencies": {
     "axios": "^0.21.1",
     "element-plus": "^1.0.2-beta.36",
+    "lint-staged": "^11.0.0",
     "vue": "^3.0.5",
     "vue-router": "4",
     "vuex": "^4.0.0"

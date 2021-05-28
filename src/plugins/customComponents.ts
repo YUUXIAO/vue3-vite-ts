@@ -6,51 +6,6 @@ import { defineAsyncComponent } from 'vue'
 import type { App } from 'vue'
 
 const getModules = () => {
-  var a = '12'
-
-
-
-
-
-  
-
-
-
-
-  
-
-  
-
-  
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
   return import.meta.glob('../components/Base/*.vue')
 }
 
