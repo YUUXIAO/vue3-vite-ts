@@ -30,7 +30,12 @@
 </template>
 
 <script lang="ts">
+import { mapState } from 'vuex';
+import { useStore } from '../store'
+
 import { ref, defineComponent } from 'vue'
+
+
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -41,8 +46,18 @@ export default defineComponent({
   },
   setup: () => {
     const count = ref(0)
+    const store = useStore()
+    console.log(store.state.user.userInfo)
+    const appName = store.state.user.userInfo
+    console.log(appName)
     return { count }
   },
+  computed:{
+    ...mapState(['counter']),  // 映射state counter
+    doubleCounter(): number {
+      return this.$store.state.counter * 2;  // $store已经有类型了
+    },
+  }
 })
 </script>
 
