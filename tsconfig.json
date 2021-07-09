@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -8,7 +9,10 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "paths": {
+      "@/*": ["src/*"],
+    },
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
   },
   "types": ["vite/client"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"]

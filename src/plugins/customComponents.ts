@@ -5,22 +5,20 @@
 import { defineAsyncComponent } from 'vue'
 import type { App } from 'vue'
 
-const getModules = () => {
-  const a = '111111'
-  console.log(a)
+import upperFirst from 'lodash/upperFirst'
+import camelCase from 'lodash/camelCase'
 
-  return import.meta.glob('../components/Base/*.vue')
+const getModules = () => {
+  return import.meta.glob('../components/base/*.vue')
 }
 
 export const asyncComponent = function (app: App<Element>): void {
   const modules = getModules()
-  console.log(modules)
   Object.keys(modules).forEach((key: string) => {
     const AsyncComponent = defineAsyncComponent(modules[key])
-    const componentName = key
-    // const componentName = upperFirst(
-    //   camelCase(key.replace(/^\..\/components\/common\/(.*)\.\w+$/, '$1'))
-    // );
+    const componentName = upperFirst(
+      camelCase(key.replace(/^\..\/components\/base\/(.*)\.\w+$/, '$1')),
+    )
     app.component(componentName, AsyncComponent)
   })
 }

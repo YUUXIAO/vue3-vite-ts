@@ -1,0 +1,268 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: '微软雅黑';
+}
+
+body {
+  background: rgba(255, 255, 255, 1);
+}
+
+.w50 {
+  width: 50px;
+}
+
+.w80 {
+  width: 80px;
+}
+
+.w140 {
+  width: 140px;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.w110 {
+  width: 110px;
+}
+
+.w180 {
+  width: 180px;
+}
+
+.w200 {
+  width: 200px !important;
+}
+
+.w260 {
+  width: 260px;
+}
+
+.w350 {
+  width: 350px !important;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.ml100 {
+  margin-left: 100px;
+}
+
+.mr100 {
+  margin-right: 100px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.ml30 {
+  margin-left: 30px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.bgf5 {
+  background: rgba(255, 255, 255, 1);
+}
+
+.w400 {
+  width: 400px;
+}
+
+.w300 {
+  width: 300px;
+}
+
+.w260 {
+  width: 260px;
+}
+
+.w200 {
+  width: 200px;
+}
+
+.w120 {
+  width: 120px;
+}
+
+.w68 {
+  width: 68px;
+}
+
+.w80 {
+  width: 80px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.p20 {
+  padding: 20px;
+}
+
+.red {
+  color: red;
+}
+
+.questionTitle {
+  height: 60px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(237, 240, 246, 1);
+}
+
+.vTop {
+  vertical-align: top;
+}
+
+.el-textarea__inner {
+  resize: both !important;
+}
+
+/* 布局 */
+
+.dis-flex {
+  display: flex;
+}
+
+.flex-x-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-x-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-x-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-x-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-x-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-y-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-y-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-y-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-dir-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-y-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex {
+  flex: 1;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+/* 子元素水平垂直居中 */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 多行子元素垂直居中 */
+
+.flex-mcenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 水平垂直居中[父元素需设置：position:relative] */
+
+.trans-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inblock {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.bold {
+  font-weight: 700;
+}
